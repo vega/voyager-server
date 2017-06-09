@@ -8,3 +8,9 @@ export function serializeGroup(group: any) {
     orderGroupBy: group.orderGroupBy
   };
 }
+
+export function serializeSchema(schema: any) {
+  return {
+    fields: schema.fieldSchemas
+  };
+}
