@@ -1,12 +1,10 @@
-import {SpecQueryModelGroup} from 'compassql/build/src/model';
 
-import {plotObjects} from './plot';
 
-export function serialize(modelGroup: SpecQueryModelGroup, data: any) {
+export function serializeGroup(group: any) {
   return {
-    name: modelGroup.name,
-    items: plotObjects(modelGroup, data),
-    groupBy: modelGroup.groupBy,
-    orderGroupBy: modelGroup.orderGroupBy
+    name: group.name,
+    items: group.items,
+    groupBy: group.groupBy,
+    orderGroupBy: group.orderGroupBy
   };
 }
