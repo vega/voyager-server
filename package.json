@@ -41,10 +41,10 @@
     "compassql": "0.12.1",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.3",
+    "datavoyager": "^2.0.0-alpha.2",
     "ejs": "^2.5.1",
     "express": "^4.15.3",
     "morgan": "^1.7.0",
-    "vega-lite": "2.0.0-beta.3",
-    "voyager": "https://github.com/vega/voyager"
+    "vega-lite": "2.0.0-beta.3"
   }
 }

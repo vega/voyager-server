@@ -1,8 +1,8 @@
 import * as express from 'express';
 
 import {recommend} from 'compassql/build/src/recommend';
+import {fetchCompassQLRecommend, Schema} from 'datavoyager/build/src/api/api';
 import {Data} from 'vega-lite/build/src/data';
-import {fetchCompassQLRecommend, Schema} from 'voyager/build/src/api/api';
 import {serializeGroup} from './utils';
 
 const router = express.Router();
