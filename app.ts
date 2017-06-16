@@ -42,6 +42,7 @@ if (app.get('env') === 'development') {
     //   error: err
     // });
 
+    // tslint:disable-next-line:no-console
     console.error("ERROR", err);
 
     res.status(err.status || 500).send({

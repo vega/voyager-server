@@ -55,10 +55,12 @@ server.on('error', (error: HTTPError) => {
   // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':
+      // tslint:disable-next-line:no-console
       console.error(bind + ' requires elevated privileges');
       process.exit(1);
       break;
     case 'EADDRINUSE':
+      // tslint:disable-next-line:no-console
       console.error(bind + ' is already in use');
       process.exit(1);
       break;
@@ -73,5 +75,6 @@ server.on('error', (error: HTTPError) => {
 server.on('listening', () => {
   const addr = server.address();
   const bind = (typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`);
+  // tslint:disable-next-line:no-console
   console.log(`Listening on ${bind}`);
 });

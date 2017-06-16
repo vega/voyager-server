@@ -8,15 +8,10 @@
         "outDir": "./build/",
         "importHelpers": true
     },
-    "filesGlob": [
-      "**/*.ts",
-      "**/*.tsx"
-    ],
-
     "include": [
+      "./node_modules/compassql/typings/*.d.ts",
       "./node_modules/vega-lite/typings/vega.d.ts",
       "./node_modules/vega-lite/typings/vega-util.d.ts",
-      "./node_modules/compassql/typings/*.d.ts",
       "node_modules/@types/**/*.d.ts",
       "./server/**/*"
     ]
