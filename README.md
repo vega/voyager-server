@@ -4,6 +4,8 @@ API for running core features of [voyager](https://github.com/vega/voyager/) on 
 
 This is an express app that can be used to offload Voyager's process-heavy tasks to a backend service.
 
+**NOTE:** This repo provides only a server-side API for a small set of features from voyager. For the main client-side application, please see the [voyager](https://github.com/vega/voyager/) repo.
+
 ## Features
 
 voyager-server currently provides two endpoints:
