@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "webpack --config config/webpack.config.js",
-    "postinstall": "node node_modules/typings/dist/bin.js install --overwrite",
+    "postinstall": "npm run build",
     "prestart": "yarn build",
     "start": "node build/server",
     "lint": "tslint -c tslint.json server/**/*.ts bin/*.ts"
