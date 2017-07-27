@@ -7,7 +7,6 @@
   },
   "scripts": {
     "build": "webpack --config config/webpack.config.js",
-    "postinstall": "npm run build",
     "prestart": "yarn build",
     "start": "node build/server",
     "lint": "tslint -c tslint.json server/**/*.ts bin/*.ts"
