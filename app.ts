@@ -13,15 +13,11 @@ const app = express();
 
 app.set('env', ENV);
 
-// view engine setup
-app.set('views', `${root}/server/views/`);
-app.set('view engine', 'ejs');
-
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
-
+// use server/routes.ts for handling responses
 app.use('/', routes);
 
 // // catch 404 and forward to error handler
@@ -36,11 +32,6 @@ app.use((req: express.Request, res: express.Response, next: express.NextFunction
 // will print stacktrace
 if (app.get('env') === 'development') {
   app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
-    // res.status(err.status || 500);
-    // res.render('error', {
-    //   message: err.message,
-    //   error: err
-    // });
 
     // tslint:disable-next-line:no-console
     console.error("ERROR", err);

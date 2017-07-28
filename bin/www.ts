@@ -1,7 +1,3 @@
-/**
- * Module dependencies.
- */
-// import * as debug from 'debug';
 import * as http from 'http';
 
 import * as app from '../app';
@@ -10,23 +6,6 @@ import * as app from '../app';
  * Get port from environment and store in Express.
  */
 const PORT = process.env.PORT || '3000';
-
-/**
- * Normalize a port into a number, string, or false.
- */
-function getPort(val: string) {
-  const port = parseInt(val, 10);
-  if (isNaN(port)) {
-    // named pipe
-    return val;
-  }
-  if (port >= 0) {
-    // port number
-    return port;
-  }
-  return false;
-}
-
 app.set('port', PORT);
 
 /**
