@@ -2,7 +2,7 @@ import * as express from 'express';
 
 import {fetchCompassQLBuildSchema, fetchCompassQLRecommend, Schema} from 'datavoyager/build/src/api/api';
 import {Data} from 'vega-lite/build/src/data';
-import {serializeGroup, serializeSchema} from './utils';
+import {serializeSchema} from './utils';
 
 const router = express.Router();
 
@@ -26,9 +26,9 @@ router.route('/recommend').post((req: express.Request, res: express.Response) =>
 
   fetchCompassQLRecommend(query, schema, data).then(
     result => {
-      res.status(200).send(serializeGroup(result));
+      res.status(200).send(result);
     }
-  )
+  );
 });
 
 /**
@@ -42,7 +42,7 @@ router.route('/build').post((req: express.Request, res: express.Response) => {
     result => {
       res.status(200).send(serializeSchema(result));
     }
-  )
+  );
 });
 
 export = router;
